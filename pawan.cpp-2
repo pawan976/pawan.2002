@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    double num1,num2;
+    char operations;
+cout<<"simple calculator"<<endl;
+cout<<"enter a two numbers followed by an operation(+,-,*,/):"<<endl;
+cin>>num1>>num2>>operations;
+switch(operations)
+{
+    case'+':
+    cout<<num1<<"+"<<num2<<"="<<num1+num2<<endl;
+    break;
+   case'-':
+    cout<<num1<<"-"<<num2<<"="<<num1-num2<<endl;
+   break;
+   case'*':
+    cout<<num1<<"*"<<num2<<"="<<num1*num2<<endl;
+   break;
+   case'/':
+    if(num2!=0)
+    {
+        cout<<num1<<"/"<<num2<<"="<<num1/num2<<endl;
+    }
+     else
+    {
+        cout<<"Error:division by zero is not allowed."<<endl;
+    }
+     break;
+     default:
+     cout<<"invalid operations.please enter one of +,-,*,/."<<endl;
+}
+
+  return 0;
+}
